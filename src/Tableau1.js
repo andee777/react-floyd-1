@@ -8,9 +8,14 @@ export default function Tableau1(props) {
 };
 
 export const Row = (props) => {
-    return props.row.map((elem, i) => {
-        return <div key={i} style={{backgroundColor: "#3e434c", border: "1px solid lightGrey", width:"50px", height:"50px"}}>
-            {(elem === 999999) ? "∞" : elem}
-        </div>
+    return props.row.map((square, i) => {
+        return <button key={i} 
+                    style={{
+                        color:"white",
+                        backgroundColor: "#3e434c", 
+                        border: "1px solid lightGrey", 
+                        width:"50px", height:"50px"}}>
+            {(square === 999999) ? "∞" : square}
+        </button>
     })
 };
